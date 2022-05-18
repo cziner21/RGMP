@@ -1,0 +1,13 @@
+.counter{
+    text-align: center;
+}
+
+.counter-value{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.counter-controls > button:first-child{
+    margin-right: 1rem;
+}

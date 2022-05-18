@@ -1,0 +1,75 @@
+.gender-switch-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gender-switch-checkbox {
+    height: 0;
+    width: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+.gender-switch {
+    border: solid 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background: #fff;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.gender-switch--off {
+    background: #e66465;
+}
+
+.gender-switch--on {
+    background: #9198e5;
+}
+
+.gender-switch .gender-switch-button {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    width: 45px;
+    height: 45px;
+    transition: 0.2s;
+    background: #000;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    border-radius: 50%;
+}
+
+.gender-switch-checkbox:checked + .gender-switch-button {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.gender-switch-checkbox:active + .gender-switch-button {
+    width: 60px;
+}
+
+.gender-switch-labels {
+    display: relative;
+    z-index: 0;
+    height: 100%;
+    font: 14pt 'Segoe UI', Verdana, sans-serif;
+}
+
+.gender-switch-labels span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.gender-switch-labels span:first-child {
+    left: 0;
+}
+.gender-switch-labels span:last-child {
+    right: 0;
+}
